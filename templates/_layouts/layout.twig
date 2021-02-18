@@ -1,3 +1,9 @@
+
+{#
+ # This layout template extends the _layouts/base.html layout, and defines the
+ # main site layout: the header, footer, and main content area.
+-#}
+
 {% extends "_layouts/base" %}
 
 {# Define the site navigation #}
@@ -8,14 +14,43 @@
 } %}
 
 {% block body %}
-    <div class="container">
-      {% block content %}
-      {% endblock %}
-    </div>
+	<header id="header">
+	<div class="container">
+		<div class="main-nav flex">
+			<h1><a href="{{ siteUrl }}"><img src="./assets/logo/vito-logo.jpg" width="300" height="125" 
+			alt="Vito C Photography"></a></h1>
+			<nav>
+				<ul>
+					{% for slug, item in nav %}
+						<li>
+							<a href="{{ url(slug) }}" {% if craft.app.request.segments|first == slug %}class="sel"{% endif %}>
+								<strong>{{ item.title }}</strong>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+	</header>
+	<main id="main" role="main">
+		{% block main %}{% endblock %}
+	</main>
     <footer id="footer">
-		<div class="flex">
-			<div class="g1-flex4 g2-flex3 g3-flex6">
+		<div class="footer-copy">
+			<div>
 				<p class="copyright">{{ footer.copyrightNotice|replace('{year}', now|date('Y')) }}</p>
+			</div>
+			 <p class="social-icons">
+              <a href="" class="social-round-icon fa-icon" target="_blank" rel="noopener noreferrer" title="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="" class="social-round-icon fa-icon" target="_blank" rel="noopener noreferrer" title="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </p>
+			<div>
+				<p> Website Built by <a href="https://dustinfloer.github.io/floerportfolio/">Dustin Floer</a></p>
 			</div>
 		</div>
 	</footer>

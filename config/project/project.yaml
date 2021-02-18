@@ -1,4 +1,4 @@
-dateModified: 1613075428
+dateModified: 1613669914
 email:
   fromEmail: dustinfloer@gmail.com
   fromName: 'Vito C Photography'
@@ -12,7 +12,7 @@ system:
   edition: solo
   live: true
   name: 'Vito C Photography'
-  schemaVersion: 3.6.2
+  schemaVersion: 3.6.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
