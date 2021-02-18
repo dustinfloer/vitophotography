@@ -1,0 +1,18 @@
+contentColumnType: string(1020)
+fieldGroup: d8170e57-247c-467f-8a0f-6ec1e60fb372
+handle: copyrightNotice
+instructions: ''
+name: 'Copyright Notice'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 255
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,8 +1,13 @@
-dateModified: 1613062345
+dateModified: 1613075428
 email:
   fromEmail: dustinfloer@gmail.com
   fromName: 'Vito C Photography'
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

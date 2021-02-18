@@ -1,0 +1,22 @@
+{% extends "_layouts/base" %}
+
+{# Define the site navigation #}
+{% set nav = {
+	about:    { title: "About Vito", desc: "About Us" },
+	portfolio: { title: "Portfolio", desc: "Services" },
+	contact:     { title: "Get in Touch", desc: "Our Work" }
+} %}
+
+{% block body %}
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <footer id="footer">
+		<div class="flex">
+			<div class="g1-flex4 g2-flex3 g3-flex6">
+				<p class="copyright">{{ footer.copyrightNotice|replace('{year}', now|date('Y')) }}</p>
+			</div>
+		</div>
+	</footer>
+{% endblock %}
