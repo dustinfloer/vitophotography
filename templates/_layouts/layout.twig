@@ -9,39 +9,34 @@
 {# Define the site navigation #}
 {% set nav = {
 	about:    { title: "About Vito", desc: "About Us" },
-	portfolio: { title: "Portfolio", desc: "Services" },
-	contact:     { title: "Get in Touch", desc: "Our Work" }
+	portfolio: { title: "Portfolio", desc: "Portfolio" },
+	services: {title: "Services", desc: "Services" },
+	contact:  { title: "Get in Touch", desc: "Contact" }
 } %}
 
 {% block body %}
 	<header id="header">
-	<div class="container">
-		<div class="main-nav flex">
-			<h1><a href="{{ siteUrl }}"><img src="./assets/logo/vito-logo.jpg" width="300" height="125" 
-			alt="Vito C Photography"></a></h1>
-			<nav>
-				<ul>
-					{% for slug, item in nav %}
-						<li>
-							<a href="{{ url(slug) }}" {% if craft.app.request.segments|first == slug %}class="sel"{% endif %}>
-								<strong>{{ item.title }}</strong>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</nav>
-		</div>
+	<div class="container mx-auto">	
+		<nav>
+		<ul class="flex flex-row justify-evenly flex-shrink">
+		  <li><a href="/about">About</a></li>
+		  <li><a href="/portfolio">Portfolio</a></li>
+		  <div id="logo"><a href="{{ siteUrl }}"><img src="./assets/logo/vito-logo.jpg" width="320" height="155"></a></div>
+		  <li><a href="/services">Services</a></li>
+		  <li><a href="/contact">Get in Touch</a></li>
+		 </ul> 
+		</nav>
 	</div>
 	</header>
 	<main id="main" role="main">
 		{% block main %}{% endblock %}
 	</main>
     <footer id="footer">
-		<div class="footer-copy">
+		<div class="footer-copy flex flex-row justify-between">
 			<div>
 				<p class="copyright">{{ footer.copyrightNotice|replace('{year}', now|date('Y')) }}</p>
 			</div>
-			 <p class="social-icons">
+			 <p class="social-icons justify-center">
               <a href="" class="social-round-icon fa-icon" target="_blank" rel="noopener noreferrer" title="">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
@@ -50,7 +45,7 @@
               </a>
             </p>
 			<div>
-				<p> Website Built by <a href="https://dustinfloer.github.io/floerportfolio/">Dustin Floer</a></p>
+				<p class="developer justify-end"> {{ footer.copyrightDeveloper }} </p>
 			</div>
 		</div>
 	</footer>
