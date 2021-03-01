@@ -1,0 +1,81 @@
+field: e2493e4d-7158-4ab9-9df6-074ea1fca9d8
+fieldLayouts:
+  9540bb6f-d3ec-4a4e-afd0-c4dfbc4aa1ef:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b7001412-d819-45bd-8ac6-5b93678128f3
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b8a416ed-6953-478f-bb0c-b2bab64acc6c
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  b7001412-d819-45bd-8ac6-5b93678128f3:
+    contentColumnType: string(120)
+    fieldGroup: null
+    handle: heading
+    instructions: 'The title for the service being listed. '
+    name: Heading
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: 30
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b8a416ed-6953-478f-bb0c-b2bab64acc6c:
+    contentColumnType: string
+    fieldGroup: null
+    handle: servicesImage
+    instructions: 'The image that matches the service that is being offered. '
+    name: 'Services Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds: null
+      defaultUploadLocationSource: 'volume:f7540f71-83b7-4f0c-8c4b-6d81a58a0e65'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: ''
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:f7540f71-83b7-4f0c-8c4b-6d81a58a0e65'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: services
+name: Services
+sortOrder: 1

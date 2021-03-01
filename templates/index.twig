@@ -1,7 +1,55 @@
 {% extends "_layouts/layout" %}
 
 {% block main %}
-    {% if entry.body|length %}
-        <div class="font-bold text-center">{{ entry.body }}</div>
-    {% endif %}
+    <section id="hero">
+        {% if entry.heroImage|length %}
+            {% for image in entry.heroImage.all() %}
+              <img class="hero-image" src="{{ image.url }}" alt="{{ image.title }}" />
+            {% endfor %}
+        {% endif %}    
+        <div class="hero-text">
+            {{ entry.heroText }}
+        </div>
+    </section>
+
+    <section id="aboutVito">
+        <div class="about-container flex flex-row">
+            <div class="about-image">
+            {% if entry.aboutImage|length %}
+                {% for image in entry.aboutImage.all() %}
+                    <img src="{{ image.url }}" alt="{{ image.title }}">
+                {% endfor %}
+            {% endif %}        
+            </div>
+            <div class="about-text">
+                {{ entry.aboutText }}
+            </div>    
+        </div>
+    </section>
+
+    <section id="servicesContainer">
+    {# Create a for loop to add all services to home page. -#}
+        <div class="services flex flex-row flex-nowrap">
+            {% for block in entry.serviceOfferings.all() %}
+                    {% set photo = block.servicesImage.one() %}
+                    {% if photo %}
+                        <img class="" src="{{ photo.url({ width: 250, height: 250 }) }}" alt="{{ photo.title }}">
+                    {% endif %}        
+                    <blockquote>{{ block.heading }}</blockquote>     
+            {% endfor %}
+        </div>    
+    </section>
+
+    <section id="ctaContainer">
+    {# This will have a cta image with text and a button overlay. -#}
+        {% if entry.ctaImage|length %}
+            {% for image in entry.ctaImage.all() %}
+              <img class="cta-image" src="{{ image.url }}" alt="{{ image.title }}" />
+            {% endfor %}
+        {% endif %}    
+        <div class="cta-text">
+            {{ entry.ctaText }}
+            <button class="cta-button">Start Inquiry Here</button>
+        </div>
+    </section>
 {% endblock %}

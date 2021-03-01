@@ -1,0 +1,27 @@
+contentColumnType: text
+fieldGroup: c7f36e7d-82e8-458c-a602-4f071f505a6c
+handle: ctaText
+instructions: 'Text that will overlay call to action image listed at the bottom of the home page. (Above the footer.)'
+name: 'CTA Text'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

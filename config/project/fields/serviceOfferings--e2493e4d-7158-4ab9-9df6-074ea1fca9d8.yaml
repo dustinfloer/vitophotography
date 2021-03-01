@@ -1,0 +1,14 @@
+contentColumnType: string
+fieldGroup: c7f36e7d-82e8-458c-a602-4f071f505a6c
+handle: serviceOfferings
+instructions: 'The services offered by Vito C Photography. These include Commercial, Wedding, Lifestyle, and Portrait. In this field, you may add a title and an image. '
+name: 'Service Offerings'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_serviceofferings}}'
+  maxBlocks: '4'
+  minBlocks: ''
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

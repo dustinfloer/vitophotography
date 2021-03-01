@@ -2,8 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-text {
+  position: absolute;
+  top: 300px;
+  left: 16px;
+  font-size: 38px;
+}
+
+#aboutVito {
+  background-color: black;
+}
+
+.about-image {
+  margin: 50px;
+}
+
+.about-text {
+  color: white;
+  margin: 50px;
+}
+
+#servicesContainer {
+  border-top: 5px solid orange;
+}
+
+.cta-text {
+  position: absolute;
+  top: 2300px;
+  left: 16px;
+  font-size: 28px;
+}
+
 footer {
   background: black;
   color: white;
   padding: 15px;
+}
+
+.social-round-icon {
+  padding: 3px;
 }

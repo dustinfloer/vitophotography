@@ -1,0 +1,31 @@
+contentColumnType: string
+fieldGroup: c7f36e7d-82e8-458c-a602-4f071f505a6c
+handle: ctaImage
+instructions: 'Call to action image at the bottom of the home page. (Above the footer)'
+name: 'CTA Image'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:f7540f71-83b7-4f0c-8c4b-6d81a58a0e65'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:f7540f71-83b7-4f0c-8c4b-6d81a58a0e65'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets
